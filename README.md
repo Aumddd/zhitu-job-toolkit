@@ -68,6 +68,10 @@ start.bat
 ```
 server.py              本地服务器（Python 标准库，提供静态页面 + 岗位聚合接口）
 start.bat              Windows 一键启动
+使用说明.txt             给完全不懂技术的同学看的图文版上手说明
+scripts/
+  build-release.ps1    重新打包 dist/ 下的发布压缩包
+  publish.ps1          发布到 GitHub（建仓库、推送、打标签）
 web/
   index.html           页面骨架
   css/styles.css       全部样式（含深色主题与打印样式）
@@ -83,6 +87,18 @@ web/
   data/seed-jobs.json  内置示例岗位（离线可用）
 .cache/                岗位搜索缓存（自动生成）
 ```
+
+## 打包与发布（维护者）
+
+```powershell
+# 重新打包发布压缩包，产物在 dist/ 下
+powershell -ExecutionPolicy Bypass -File scripts\build-release.ps1 -Version 1.0.0
+
+# 发布到 GitHub（未安装 gh 时加 -SkipCreate，先在网页建好空仓库）
+powershell -ExecutionPolicy Bypass -File scripts\publish.ps1 -Owner 你的GitHub用户名
+```
+
+发布完在 Releases 页面把 `dist\zhitu-job-toolkit-v1.0.0.zip` 作为附件上传，使用者就能一键下载解压即用了。
 
 ## 常用快捷键
 

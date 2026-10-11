@@ -4,6 +4,7 @@
 # Windows 批处理必须是 CRLF，否则个别情况下跳转会出错
 *.bat text eol=crlf
 *.cmd text eol=crlf
+*.ps1 text eol=crlf
 
 # 图片按二进制处理
 *.png binary
