@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>职途 · 求职简历管理工具</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232f6fed'/%3E%3Cpath d='M9 11h14M9 16h14M9 21h9' stroke='white' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div id="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-mark">职</div>
+      <div class="brand-text">
+        <strong>职途</strong>
+        <span>求职简历管理工具</span>
+      </div>
+    </div>
+
+    <nav class="nav" id="nav">
+      <a class="nav-item" href="#/dashboard" data-view="dashboard">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12l9-8 9 8M5 10.5V20h14v-9.5"/></svg>
+        <span>概览</span>
+      </a>
+      <a class="nav-item" href="#/resumes" data-view="resumes">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M10 12h6M10 16h6"/></svg>
+        <span>我的简历</span>
+      </a>
+      <a class="nav-item" href="#/jobs" data-view="jobs">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>
+        <span>找工作</span>
+      </a>
+      <a class="nav-item" href="#/tracker" data-view="tracker">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="5" height="16" rx="1.5"/><rect x="10" y="4" width="5" height="10" rx="1.5"/><rect x="17" y="4" width="4" height="13" rx="1.5"/></svg>
+        <span>投递追踪</span>
+      </a>
+      <a class="nav-item" href="#/interview" data-view="interview">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 10h8M8 13h5"/></svg>
+        <span>面试准备</span>
+      </a>
+      <a class="nav-item" href="#/settings" data-view="settings">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.8v2.6M12 18.6v2.6M4.5 12H2M22 12h-2.5M6.2 6.2 4.4 4.4M19.6 19.6l-1.8-1.8M17.8 6.2l1.8-1.8M4.4 19.6l1.8-1.8"/></svg>
+        <span>数据与设置</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-foot">
+      <button class="icon-btn" id="themeToggle" type="button" title="切换深浅色">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg>
+        <span id="themeLabel">浅色</span>
+      </button>
+      <div class="sidebar-hint">数据保存在本机浏览器中</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="icon-btn only-mobile" id="menuBtn" type="button" title="菜单">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <div class="topbar-title">
+        <h1 id="viewTitle">概览</h1>
+        <p id="viewSubtitle">今天也离理想工作更近一点</p>
+      </div>
+      <div class="topbar-actions" id="topbarActions"></div>
+    </header>
+
+    <div class="content" id="content">
+      <section class="view" id="view-dashboard"></section>
+      <section class="view" id="view-resumes"></section>
+      <section class="view" id="view-jobs"></section>
+      <section class="view" id="view-tracker"></section>
+      <section class="view" id="view-interview"></section>
+      <section class="view" id="view-settings"></section>
+    </div>
+  </main>
+</div>
+
+<div id="overlayRoot"></div>
+<div id="modalRoot"></div>
+<div id="toastRoot" class="toast-root"></div>
+<div id="printRoot" class="print-root"></div>
+<div id="bootScreen" class="boot">
+  <div class="boot-mark">职</div>
+  <div class="boot-text">正在准备你的求职工作台…</div>
+</div>
+
+<script src="js/util.js"></script>
+<script src="js/skills.js"></script>
+<script src="js/store.js"></script>
+<script src="js/api.js"></script>
+<script src="js/jd.js"></script>
+<script src="js/interview-bank.js"></script>
+<script src="js/views/dashboard.js"></script>
+<script src="js/views/resumes.js"></script>
+<script src="js/views/jobs.js"></script>
+<script src="js/views/tracker.js"></script>
+<script src="js/views/interview.js"></script>
+<script src="js/views/settings.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

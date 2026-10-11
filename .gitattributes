@@ -1,0 +1,11 @@
+# 统一换行符，避免不同系统下 diff 噪音
+* text=auto
+
+# Windows 批处理必须是 CRLF，否则个别情况下跳转会出错
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# 图片按二进制处理
+*.png binary
+*.jpg binary
+*.ico binary
