@@ -12,6 +12,12 @@ venv/
 dist/
 *.zip
 
+# 凭据（绝对不要提交）
+.github-token
+.git-token
+*.token
+.env
+
 # 编辑器 / 系统
 .vscode/
 .idea/
